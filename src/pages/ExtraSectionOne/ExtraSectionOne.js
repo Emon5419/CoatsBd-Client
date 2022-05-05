@@ -6,12 +6,12 @@ import icon3 from '../../images/Thinking icon.png';
 
 const ExtraSectionOne = () => {
    return (
-      <div className='mt-5 text-center'>
-         <p>The world’s leading Industrial Thread Company</p>
-         <div className='div-conatnier w-50 mx-auto mt-5'>
+      <div className=' mt-5 text-center'>
+         <p>The world's leading Industrial Thread Company</p>
+         <div className='main-container w-50 mx-auto mt-5'>
             <div className='ms-auto text-center'>
                <img src={icon1} alt="" />
-               <p>1,000+ Customars</p>
+               <p>1,000+ Customers</p>
             </div>
             <div className='ms-auto  text-center'>
                <img src={icon2} alt="" />

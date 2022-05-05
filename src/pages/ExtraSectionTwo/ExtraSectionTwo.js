@@ -8,7 +8,7 @@ const ExtraSectionTwo = () => {
    return (
       <div className='mt-5'>
          <h5 className='text-center underline'><u>Board of Directors</u></h5>
-         <CardGroup className='contanier'>
+         <CardGroup className='container'>
 
             <Card>
                <Card.Img variant="top" src={name1} />
