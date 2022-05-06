@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Blogs from './pages/Blogs/Blogs';
 import Home from './pages/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
 import Header from './pages/shared/Header/Header';
@@ -8,13 +9,11 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-
       <Routes>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/inventory' element={<Inventory />}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
       </Routes>
-
-      <Home />
     </div>
   );
 }
