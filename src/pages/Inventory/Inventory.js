@@ -4,9 +4,10 @@ import './Inventory.css';
 
 const Inventory = () => {
    const [products] = useProducts();
+
    return (
 
-      <div className='top-container'>
+      <div>
          {
             products.map(product =>
 
@@ -19,6 +20,7 @@ const Inventory = () => {
                            <p className="card-title">Threads-Brand: {product.brand}</p>
                            <p className="card-title">Price: ${product.price}</p>
                            <p className="card-title">Supplier: {product.supplier}</p>
+
                            <p className="card-title">{product.des}</p>
                            <button type="button" className="btn btn-outline-primary btn-a">Update Stock</button>
                         </div>
