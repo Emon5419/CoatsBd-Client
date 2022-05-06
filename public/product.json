@@ -1,0 +1,94 @@
+[
+{
+   "_id": "62749ee99e79650886c20c20",
+   "des":"Coats Epic thread is a versatile quality polyester corespun sewing thread used by leading brands and manufacturers worldwide.",
+   "name":"Epic",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Epic/Hero/Banner_-_Epic.jpg?rev=43990e1ffe0346feb84c59607ac385f3&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee972358078c51e9a87",
+      "des":"Coats Dual Duty is a premium quality corespun thread with excellent wash-down characteristics ideal for denimwear and jeans.",
+   "name":"Dual Duty",
+   "brand": "PPA",
+   "price": "600",
+   "supplier":"Coats India",
+      "img":"https://www.coats.com/-/media/Coats/Product/Dual-Duty/Hero/Banner_-_Dual_Duty.jpg?rev=88089a7fb6c345bf907a74d291a22d03&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee9f05569a5b0c09dd2",
+      "des":"Coats Nylbond is a bonded nylon thread made from pre-stabilised continuous filament nylon 6.6.",
+   "name":"Nylbond",
+   "brand": "SSP",
+   "price": "1000",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Nylbond/Hero/Nylbond.jpg?rev=7e68c87dad034d55868e5fb7af159f44&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee923ed3e7391a543cd",
+      "des":"Coats Admiral is a long-staple soft cotton sewing thread product. Due to the 100% natural fibre content, it can be applied to many specialised applications",
+   "name":"Admiral",
+   "brand": "SSP",
+   "price": "300",
+   "supplier":"Coats Indonesia",
+   "img":"https://www.coats.com/-/media/Coats/Product/Admiral/Hero/Admiral_Plus_24610-6085_Product_thubnail_Jan_2018_v2.jpg?rev=d2b2ec1ba3ef402986cd688d9469557a&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee91a77df41bdefa846",
+      "des":"Coats Aptan is a lubricated nylon thread made from pre-stabilised continuous filament nylon 6.6 and is suitable for garment dye programmes with nylon fabrics.",
+   "name":"Aptan",
+   "brand": "TXP",
+   "price": "550",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Aptan/Hero/Aptan_Steam_Blue_Product_Thumbnail_Jan_18.jpg?rev=a5ccb772e0084c7099d35253fae90249&width=767&height=431&op=crop"
+
+},
+{
+   "_id": "62749ee903fccf6cf4c23120",
+      "des":"Coats Aptan AW has a special water resistent finish which inhibits the capillary effect, thereby ensuring that no water is taken up by the thread.",
+   "name":"Aptan AW",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Aptan-AW/Hero/Antiwick_Aptan_E2449-504_Prouct_thumbnail_Jan_2018.jpg?rev=00a96d68ce2e4d3ca09cbff6f7f7d268&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee9526b4317261ca2fb",
+      "des":"Coats Aptan for Apparel is a lubricated nylon thread made from pre-stabilised continuous filament nylon 6.6.",
+   "name":"Aptan for Apparel",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Aptan-for-Apparel/Hero/Aptan_for_Apparel.jpg?rev=7d635449cc7a4b808c771fb2de6abd90&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee9eee0050a255f92fd",
+      "des":"Coats Aquamelt is a cost-effective and time-saving alternative to conventional basting or tacking threads in apparel manufacturing.",
+   "name":"Aquamelt",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Aquamelt/Hero/Banner_-_Aquamelt.jpg?rev=8275ea9b1d0e40dd9339676fae364d88&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee94b786dd139fa7282",
+      "des":"Coats Astra is a best-in-class staple spun polyester (SSP) thread with significantly higher sewing performance compared with regular SSP threads.",
+   "name":"Astra",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Astra/Thumbnail/Astra2.jpg?rev=4c08bf1f11c9495782fa6d81434b5142&width=767&height=431&op=crop"
+},
+{
+   "_id": "62749ee975c9dc8e0ee7aa97",
+      "des":"Coats Astra EcoVerde is a 100% recycled staple spun polyester (SSP) thread across a wide range of recycled fabrics and materials.",
+   "name":"Astra EcoVerde",
+   "brand": "SPA",
+   "price": "400",
+   "supplier":"Coats Bangladesh",
+   "img":"https://www.coats.com/-/media/Coats/Product/Astra-EcoVerde/Astra-EcoVerde.jpg?rev=82e79ff7dc0d42efbea0b08b61984ced&width=767&height=431&op=crop"
+}
+
+]
