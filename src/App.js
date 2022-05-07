@@ -3,6 +3,7 @@ import './App.css';
 import Blogs from './pages/Blogs/Blogs';
 import Home from './pages/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
+import NotFound from './pages/NotFound/NotFound';
 import Header from './pages/shared/Header/Header';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

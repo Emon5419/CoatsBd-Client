@@ -17,12 +17,13 @@ const Inventory = () => {
                         <img src={product.img} className="card-img-top" alt="" />
                         <div className="card-body">
                            <h5 className="card-title">Name: {product.name}</h5>
-                           <p className="card-title">Threads-Brand: {product.brand}</p>
+                           <p className="card-title">Brand: {product.brand}</p>
                            <p className="card-title">Price: ${product.price}</p>
+                           <p className="card-title">Quantity: ${product.quantity}</p>
                            <p className="card-title">Supplier: {product.supplier}</p>
 
                            <p className="card-title">{product.des}</p>
-                           <button type="button" className="btn btn-outline-primary btn-a">Update Stock</button>
+                           <button type="button" className="btn btn-primary w-100">Update Stock</button>
                         </div>
                      </div>
                   </div>
