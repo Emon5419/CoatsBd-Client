@@ -5,6 +5,9 @@ import Home from './pages/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
 import NotFound from './pages/NotFound/NotFound';
 import Header from './pages/shared/Header/Header';
+import Login from './pages/Login/Login';
+import Register from './pages/Login/Register/Register';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -13,8 +16,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+
+        <Route path='/inventory' element={
+          <RequireAuth>
+            <Inventory></Inventory>
+          </RequireAuth>}>
+        </Route>
+
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
