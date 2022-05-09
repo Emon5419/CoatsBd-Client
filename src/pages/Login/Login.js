@@ -7,31 +7,43 @@ import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import './Login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../shared/Loading/Loading';
 const Login = () => {
 
    const emailRef = useRef('');
    const passwordRef = useRef('');
    const navigate = useNavigate();
    const location = useNavigate();
-   let from = location.state?.from?.pathname || "/checkout";
+   let from = location.state?.from?.pathname || "/inventory";
 
    const [
       signInWithEmailAndPassword,
-      user
+      user,
+      loading,
+      error
    ] = useSignInWithEmailAndPassword(auth);
 
-   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
 
+   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+   if (loading || sending) {
+      return <Loading></Loading>
+   }
    if (user) {
       navigate(from, { replace: true });
    }
+
    const formSubmit = event => {
       event.preventDefault();
+
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
+
       signInWithEmailAndPassword(email, password);
+
    }
+
    const navigateRegister = () => {
       navigate('/register');
    }
@@ -60,12 +72,23 @@ const Login = () => {
                <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
             </Form.Group>
 
+            <p style={{ color: 'red' }}>{error?.message}</p>
+
             <Button variant="primary" className="w-100 mx-auto d-block mb-3" type="submit">
                Login
             </Button>
 
-            <p className="mt-2"><small>New to this page? <Link to="/register" className="text-primary text-decoration-none" onclick={navigateRegister}>Please Register</Link> </small></p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p className="mt-2">
+               <small>
+                  New to this page?
+                  <Link to="/register" className="text-primary text-decoration-none" onclick={navigateRegister}>Please Register</Link>
+               </small>
+            </p>
+
+            <p>
+               Forget Password?
+               <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button>
+            </p>
          </Form>
          <ToastContainer />
          <SocialLogin></SocialLogin>
