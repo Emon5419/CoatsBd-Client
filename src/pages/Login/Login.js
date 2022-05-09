@@ -8,6 +8,7 @@ import './Login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../shared/Loading/Loading';
+
 const Login = () => {
 
    const emailRef = useRef('');
@@ -78,14 +79,14 @@ const Login = () => {
                Login
             </Button>
 
-            <p className="mt-2">
+            <p className="mt-2 text-center">
                <small>
                   New to this page?
                   <Link to="/register" className="text-primary text-decoration-none" onclick={navigateRegister}>Please Register</Link>
                </small>
             </p>
 
-            <p>
+            <p className=' text-center'>
                Forget Password?
                <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button>
             </p>
