@@ -14,11 +14,11 @@ const TotalInventory = ({ product }) => {
                      <p className="card-title">Price: ${price}</p>
                      <p className="card-title">Supplier: {supplier}</p>
                      <p className="card-title">{des}</p>
-                     <button type="button" className="btn btn-outline-primary btn-a">Update Stock</button>
                   </div>
                </div>
             </div>
          </div>
+
       </div>
    );
 };

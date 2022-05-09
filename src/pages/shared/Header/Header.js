@@ -21,9 +21,7 @@ const Header = () => {
             <Navbar.Brand className='ms-2' href="/home">Coats Bangladesh</Navbar.Brand>
 
             <Nav className="ms-auto">
-               <Nav.Link href="/home">Home</Nav.Link>
                <Nav.Link href="/blogs">Blogs</Nav.Link>
-               <Nav.Link href="/inventory">Inventory</Nav.Link>
                {
                   user ?
                      <button className='border-0 text-white btn btn-outline-danger' onClick={handleSignOut}>Sign out</button>

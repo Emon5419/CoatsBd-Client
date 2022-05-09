@@ -15,7 +15,7 @@ const Login = () => {
    const passwordRef = useRef('');
    const navigate = useNavigate();
    const location = useNavigate();
-   let from = location.state?.from?.pathname || "/inventory";
+   let from = location.state?.from?.pathname || "/product";
 
    const [
       signInWithEmailAndPassword,

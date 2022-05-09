@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Product from '../Product/Product';
 import './Products.css';
 
@@ -7,7 +9,7 @@ const Products = () => {
 
    useEffect(() => {
 
-      fetch('product.json')
+      fetch('http://localhost:5000/product')
          .then(res => res.json())
          .then(data => setProducts(data));
 
@@ -23,6 +25,8 @@ const Products = () => {
                   product={product}
                ></Product>)
             }
+            <Button className='btn btn-Primary p-2'><Link to='/inventory'> See More Details </Link></Button>
+
          </div>
 
       </div>

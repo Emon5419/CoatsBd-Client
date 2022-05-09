@@ -1,9 +1,17 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts/useProducts';
 import './Inventory.css';
 
 const Inventory = () => {
    const [products] = useProducts();
+
+   const navigate = useNavigate();
+
+   const navigateToProductsDetails = id => {
+      navigate(`/product/${id}`)
+   }
 
    return (
 
@@ -21,9 +29,8 @@ const Inventory = () => {
                            <p className="card-title">Price: ${product.price}</p>
                            <p className="card-title">Quantity: ${product.quantity}</p>
                            <p className="card-title">Supplier: {product.supplier}</p>
-
                            <p className="card-title">{product.des}</p>
-                           <button type="button" className="btn btn-primary w-100">Update Stock</button>
+                           <Button className='btn btn-Primary p-2' onClick={() => navigateToProductsDetails(product._id)}> Add Products</Button>
                         </div>
                      </div>
                   </div>

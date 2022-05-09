@@ -1,0 +1,9 @@
+.detail-container{
+   border: 2px solid blue;
+   border-radius: 5px;
+   padding: 20px;
+}
+.detail-container img{
+   margin-top: 60px;
+   border-radius: 5px;
+}
