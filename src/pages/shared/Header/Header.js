@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../../images/logo.png';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
@@ -22,11 +22,19 @@ const Header = () => {
 
             <Nav className="ms-auto">
                <Nav.Link href="/blogs">Blogs</Nav.Link>
+
                {
                   user ?
                      <button className='border-0 text-white btn btn-outline-danger' onClick={handleSignOut}>Sign out</button>
                      :
                      <Nav.Link to="/login">Login</Nav.Link >
+               }
+               {
+                  user ?
+                     <NavLink to='/inventory'>Inventory</NavLink>
+                     :
+                     <Nav.Link to="/login">Login</Nav.Link >
+
                }
             </Nav>
 
