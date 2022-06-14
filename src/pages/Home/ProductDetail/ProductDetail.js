@@ -17,14 +17,14 @@ const ProductDetail = () => {
          .then(res => res.json())
          .then(data => setProduct(data));
 
-   }, []);
+   });
 
 
    const handleDeliverItems = id => {
       const proceed = window.confirm('Delete This items?')
       if (proceed) {
 
-         const url = `http://https://warm-atoll-03222.herokuapp.com//product/${id}`;
+         const url = `http://localhost:5000/product/${id}`;
          fetch(url, {
             method: 'DELETE'
          })

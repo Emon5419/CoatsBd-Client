@@ -1,10 +1,26 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import useProducts from '../../hooks/useProducts/useProducts';
 import './Inventory.css';
+import { Card, Button } from 'react-bootstrap';
+import useProducts from '../../hooks/useProducts/useProducts';
 
 const Inventory = () => {
-   const [products] = useProducts();
+   const [products, setProducts] = useProducts();
+
+   const handleDeleteItems = id => {
+      const proceed = window.confirm('Are you sure you want to delete?')
+      if (proceed) {
+
+         const url = `http://localhost:5000/product/${id}`;
+         fetch(url, {
+            method: 'DELETE'
+         })
+            .then(res => res.json())
+            .then(data => {
+               console.log(data);
+               const remaining = products.filter(product => product._id !== id)
+               setProducts(remaining);
+            });
+      }
+   }
 
    return (
       <div>
@@ -26,6 +42,7 @@ const Inventory = () => {
                            <Card.Text>
                               Supplier: {product.supplier},
                            </Card.Text>
+                           <Button variant="danger" onClick={() => handleDeleteItems(product._id)}>Delete</Button>
                         </Card.Body>
                      </Card>
                   </div>
