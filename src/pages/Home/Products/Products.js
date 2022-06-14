@@ -9,7 +9,7 @@ const Products = () => {
 
    useEffect(() => {
 
-      fetch('http://https://warm-atoll-03222.herokuapp.com//product')
+      fetch('http://localhost:5000/product')
          .then(res => res.json())
          .then(data => setProducts(data));
 
@@ -25,7 +25,7 @@ const Products = () => {
                   product={product}
                ></Product>)
             }
-            <Button className='btn btn-Primary p-2'><Link to='/inventory'> See More Details </Link></Button>
+            <Button className='btn btn-Primary p-2'><Link to='/inventory'>Manage-Inventory</Link></Button>
 
          </div>
 

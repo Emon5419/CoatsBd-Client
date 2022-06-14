@@ -6,7 +6,7 @@ const AddService = () => {
 
    const onSubmit = data => {
       console.log(data);
-      const url = `http://https://warm-atoll-03222.herokuapp.com/product`;
+      const url = `http://warm-atoll-03222.herokuapp.com/product`;
       fetch(url, {
          method: 'POST',
          headers: {

@@ -1,0 +1,7 @@
+.manage-container{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-gap: 10px;
+   grid-template-columns: repeat(3, 1fr);
+}
