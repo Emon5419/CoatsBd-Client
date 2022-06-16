@@ -5,3 +5,8 @@
    grid-gap: 10px;
    grid-template-columns: repeat(3, 1fr);
 }
+.newRoute-btn{
+   text-align: center;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}

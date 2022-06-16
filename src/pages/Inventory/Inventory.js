@@ -1,6 +1,7 @@
 import './Inventory.css';
 import { Card, Button } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts/useProducts';
+import { Link } from 'react-router-dom';
 
 const Inventory = () => {
    const [products, setProducts] = useProducts();
@@ -24,30 +25,35 @@ const Inventory = () => {
 
    return (
       <div>
-         <h3 className='text-center mt-5 mb-0'>All Items</h3>
-         <div className='manage-container w-50 mx-auto mt-0'>
-            {
-               products.map(product =>
-                  <div className='mt-5' key={product._id} >
-                     <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={product.img} />
-                        <Card.Body>
-                           <Card.Title>{product.name}</Card.Title>
-                           <Card.Text>
-                              Price: {product.price},
-                           </Card.Text>
-                           <Card.Text>
-                              Brand: {product.brand},
-                           </Card.Text>
-                           <Card.Text>
-                              Supplier: {product.supplier},
-                           </Card.Text>
-                           <Button variant="danger" onClick={() => handleDeleteItems(product._id)}>Delete</Button>
-                        </Card.Body>
-                     </Card>
-                  </div>
-               )
-            }
+         <div>
+            <h3 className='text-center mt-5 mb-0'>All Items</h3>
+            <div className='manage-container w-50 mx-auto mt-0'>
+               {
+                  products.map(product =>
+                     <div className='mt-5' key={product._id} >
+                        <Card style={{ width: '18rem' }}>
+                           <Card.Img variant="top" src={product.img} />
+                           <Card.Body>
+                              <Card.Title>{product.name}</Card.Title>
+                              <Card.Text>
+                                 Price: {product.price},
+                              </Card.Text>
+                              <Card.Text>
+                                 Brand: {product.brand},
+                              </Card.Text>
+                              <Card.Text>
+                                 Supplier: {product.supplier},
+                              </Card.Text>
+                              <Button variant="danger" onClick={() => handleDeleteItems(product._id)}>Delete</Button>
+                           </Card.Body>
+                        </Card>
+                     </div>
+                  )
+               }
+            </div>
+            <div className='newRoute-btn' >
+               <Button className='w-25' variant="primary" > <Link to='/addNewItems'> Add New Items  </Link></Button>
+            </div>
          </div>
       </div>
    );

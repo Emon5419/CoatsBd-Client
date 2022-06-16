@@ -8,9 +8,8 @@ import Header from './pages/shared/Header/Header';
 import Login from './pages/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
-
 import ProductDetail from './pages/Home/ProductDetail/ProductDetail';
-import AddItems from './pages/AddItems/AddItems';
+import AddNewItems from './pages/AddNewItems/AddNewItems';
 
 function App() {
   return (
@@ -23,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/addNewItems' element={<AddNewItems></AddNewItems>}></Route>
 
         {/* Require-Auth  */}
 
@@ -36,12 +36,6 @@ function App() {
             <ProductDetail></ProductDetail>
           </RequireAuth>}>
         </Route>
-        <Route path='/addItems' element={
-          <RequireAuth>
-            <AddItems></AddItems>
-          </RequireAuth>}>
-        </Route>
-
       </Routes>
     </div>
   );
