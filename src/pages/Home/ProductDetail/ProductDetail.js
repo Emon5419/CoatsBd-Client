@@ -18,7 +18,7 @@ const ProductDetail = () => {
          .then(data => setProduct(data));
 
    });
-
+   
 
    return (
       <div>
