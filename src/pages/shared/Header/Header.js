@@ -26,14 +26,14 @@ const Header = () => {
                {
                   user ?
 
-                     <Nav.Link href="/inventory">Manage-Inventory</Nav.Link>
+                     <Nav.Link href="/inventory">Inventory</Nav.Link>
                      :
                      <Nav.Link to="/login"></Nav.Link >
 
                }
                {
                   user ?
-                     <Nav.Link href='/addNewItems'>Add New Items</Nav.Link>
+                     <Nav.Link href='/addNewItems'>Add Items</Nav.Link>
                      :
                      <Nav.Link to="/login"></Nav.Link >
 

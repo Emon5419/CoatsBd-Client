@@ -9,47 +9,13 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
-   // const [error, setError] = useState('');
-
-   // const [
-   //    createUserWithEmailAndPassword,
-   //    user
-   // ] = useCreateUserWithEmailAndPassword(auth);
-
-   // const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-   // if (loading || updating) {
-   //    return <Loading></Loading>
-   // }
-
-
-   // const Navigate = useNavigate();
-   // if (user) {
-   //    Navigate('/inventory');
-   // }
-
-   // const handleRegister = async (event) => {
-   //    event.preventDefault();
-   //    const name = event.target.name.value;
-   //    const email = event.target.email.value;
-   //    const password = event.target.password.value;
-   //    // const agree = event.target.terms.checked;
-
-   //    await createUserWithEmailAndPassword(email, password);
-   //    await updateProfile({ displayName: name });
-   //    console.log('Updated profile');
-   //    Navigate('/home');
-   //    if (password.length < 6) {
-   //       setError('Password must be 6 characters or longer');
-   //       return;
-   //    }
-   // };
-
    const [
       createUserWithEmailAndPassword,
       user,
       loading,
       error,
    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
 
    const [updateProfile, updating] = useUpdateProfile(auth);
 

@@ -44,6 +44,7 @@ const Inventory = () => {
                               <Card.Text>
                                  Supplier: {product.supplier},
                               </Card.Text>
+
                               <Button variant="danger" onClick={() => handleDeleteItems(product._id)}>Delete</Button>
                            </Card.Body>
                         </Card>
