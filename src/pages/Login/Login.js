@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
+import axios from 'axios';
+
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import './Login.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../shared/Loading/Loading';
 
@@ -15,7 +17,7 @@ const Login = () => {
    const passwordRef = useRef('');
    const navigate = useNavigate();
    const location = useNavigate();
-   let from = location.state?.from?.pathname || "/product";
+   let from = location.state?.from?.pathname || "/";
 
    const [
       signInWithEmailAndPassword,
@@ -32,17 +34,19 @@ const Login = () => {
       return <Loading></Loading>
    }
    if (user) {
-      navigate(from, { replace: true });
+      // navigate(from, { replace: true });
    }
 
-   const formSubmit = event => {
+   const formSubmit = async event => {
       event.preventDefault();
 
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
 
-      signInWithEmailAndPassword(email, password);
-
+      await signInWithEmailAndPassword(email, password);
+      const { data } = await axios.post('http://localhost:5000/login', { email })
+      localStorage.setItem('accessToken', data.accessToken);
+      navigate(from, { replace: true });
    }
 
    const navigateRegister = () => {
@@ -92,7 +96,6 @@ const Login = () => {
                <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button>
             </p>
          </Form>
-         <ToastContainer />
          <SocialLogin></SocialLogin>
       </div>
 

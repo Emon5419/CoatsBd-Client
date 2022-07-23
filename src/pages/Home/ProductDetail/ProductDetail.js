@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ProductDetail.css';
 import { Button, Form } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import useProducts from '../../../hooks/useProducts/useProducts';
+import useProductDetail from '../../../hooks/useProducts/useProductDetail';
 
 const ProductDetail = () => {
    const [quantity, setQuantity] = useState(100);
 
    const { productId } = useParams();
-
-   const [product, setProduct] = useState({});
-
-   useEffect(() => {
-      const url = `http://localhost:5000/product/${productId}`;
-      fetch(url)
-         .then(res => res.json())
-         .then(data => setProduct(data));
-
-   });
-   
+   const [product] = useProductDetail(productId);
 
    return (
       <div>

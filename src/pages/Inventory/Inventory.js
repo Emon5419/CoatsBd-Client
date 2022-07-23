@@ -1,10 +1,12 @@
 import './Inventory.css';
 import { Card, Button } from 'react-bootstrap';
 import useProducts from '../../hooks/useProducts/useProducts';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const Inventory = () => {
-   const [products, setProducts] = useProducts();
+   const { productId } = useParams();
+   const [products, setProducts] = useProducts(productId);
+
 
    const handleDeleteItems = id => {
       const proceed = window.confirm('Are you sure you want to delete?')
@@ -46,6 +48,7 @@ const Inventory = () => {
                               </Card.Text>
 
                               <Button variant="danger" onClick={() => handleDeleteItems(product._id)}>Delete</Button>
+
                            </Card.Body>
                         </Card>
                      </div>
