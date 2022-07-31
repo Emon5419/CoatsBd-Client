@@ -1,14 +1,31 @@
-# CoatsBangladesh
+# Coats Bangladesh Ltd.
 
-- Live website: [Live Website](https://coatsbd-client.web.app)
+Warehouse Distributor Product Handling System.
 
-## Name of this website: Coats Bangladesh.
+## Description
 
-## Projects Using:
+This website are basically, Warehouse Distribute Management System. Client Said develop this website for company user. The user use to be add product on stock, deliver, delete and rebuild Product.
 
-- React-Bootstrap,
-- React-Firebase-Hook,
+## Getting Started
+
+### Dependencies
+
+- In Front-end we use react.Js and for backend we use MongoDB.
+- Also Use Node.Js And Express.Js
+
+### Installing
+
+- React.Js,
+- Bootstrap-5,
+- React-Router,
 - React-Form,
-- React-Router etc.
+- Font-awesome,
+- Node.Js,
+- Express.Js,
+- MongoDB,
+- etc.
 
-#This website is totally base on a multinational Thread making company.It have 50 branch all over the world.It make website a bangladesh Coats Group.
+## Programmer On This Projects
+
+Name: Alauddin Emon
+Email: [@gamil](https://alauddinemon3@gmail.com)
