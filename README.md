@@ -27,5 +27,5 @@ This website are basically, Warehouse Distribute Management System. Client Said 
 
 ## Programmer On This Projects
 
-Name: Alauddin Emon
-Email: [@gamil](https://alauddinemon3@gmail.com)
+- Name: Alauddin Emon
+- Email: [@Mail](https://alauddinemon3@gmail.com)
